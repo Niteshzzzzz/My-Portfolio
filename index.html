@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- swiper cdn  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- static file  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- for email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("Ks43PoIHZJEFHreOZ");  //  EmailJS Public Key
+        })();
+    </script>
+</head>
+
+<body onload="preLoader()">
+    <div class="preloader">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 240 240" enable-background="new 0 0 240 240" xml:space="preserve">
+            <defs>
+                <path id="path1" d="M180.3,103.7C193.9,145.6,69.7,179.9,60,137C46.3,95.1,170.5,60.7,180.3,103.7z" />
+                <path id="path2" d="M113.5,89.1c79.8-2.3,101.5,66.1,14.4,66.8C48.1,158.4,26.4,90,113.5,89.1z" />
+                <path id="path3" d="M169.1,123.5c-11.9,44-126.5,79.8-98.2-6.9C82.8,72.6,197.4,36.8,169.1,123.5z" />
+                <path id="path4" d="M59.8,136.3C46.2,94.4,170.4,60.1,180.1,103C193.8,144.9,69.6,179.3,59.8,136.3z" />
+                <path id="path5" d="M126.6,150.9c-79.8,2.3-101.5-66.1-14.4-66.8C192,81.6,213.7,150,126.6,150.9z" />
+                <path id="path6" d="M71,116.5c11.9-44,126.5-79.8,98.2,6.9C157.3,167.4,42.7,203.2,71,116.5z" />
+            </defs>
+
+            <path fill="#e1e5ea" stroke="#7d93b1" stroke-width="5" id="lower" class="st0"
+                d="M160,120c0,22.1-17.9,40-40,40s-40-17.9-40-40" />
+            <g id="asteroids" fill="#7d93b1" stroke="#e1e5ea" stroke-width="2">
+                <circle r="9">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path1" />
+                    </animateMotion>
+                </circle>
+                <circle r="8">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path2" />
+                    </animateMotion>
+                </circle>
+                <circle r="5">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path3" />
+                    </animateMotion>
+                </circle>
+                <circle r="9">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path4" />
+                    </animateMotion>
+                </circle>
+                <circle r="7">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path5" />
+                    </animateMotion>
+                </circle>
+                <circle r="6">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                        <mpath xlink:href="#path6" />
+                    </animateMotion>
+                </circle>
+            </g>
+            <path fill="#e1e5ea" stroke="#7d93b1" stroke-width="5" id="upper" class="st0"
+                d="M80,120c0-22.1,17.9-40,40-40s40,17.9,40,40" />
+        </svg>
+        <h3>Loading...</h3>
+    </div>
+    <div class="everything">
+        <main>
+            <div class="minor"></div>
+            <div class="toggle-side-bar">
+                <ul>
+                    <li class="op" id="ab">About Me</li>
+                    <li class="op" id="sk">Skills</li>
+                    <li class="op" id="pj">Project</li>
+                    <li class="op" id="ce">Certificates</li>
+                    <li class="op" id="se">Services</li>
+                    <li class="op" id="co">Contect Me</li>
+                </ul>
+            </div>
+            <div class="p1">
+                <div class="p1-con">
+                    <div class="intro">
+                        <h2>Hi, I am</h2>
+                        <h1>Nitesh Kumar</h1>
+                        <div class="move-text"><span id="element"></span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="https://github.com/Niteshzzzzz" class="git ic"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nitesh-kumar-904393259/" class="lin ic"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=" https://x.com/NiteshK08772213?s=08" class="x ic"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/niteshkumarnkzzzzz/profilecard/?igsh=MWRzcDhzMnUzM3F5bQ== " class="ins ic"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="p2">
+            </div>
+            <nav>
+                <div class="drop-down-btn"><a href="#menu" id="toggle"><span></span></a></div>
+                <div class="logo logoA"><img src="output-onlinepngtools (1).png" alt=""></div>
+                <div class="logo1"><img src="logo1.png" alt=""></div>
+                <div class="option">
+                    <div class="op-container"><div class="op" id="ab1">About Me</div><span class="expend"></span></div>
+                    <div class="op-container"><div class="op" id="sk1">Skills</div><span class="expend"></span></div>
+                    <div class="op-container"><div class="op" id="pj1">Projects</div><span class="expend"></span></div>
+                    <div class="op-container"><div class="op" id="se1">Services</div><span class="expend"></span></div>
+                    <div class="op-container"><div class="op" id="co1">Content Me</div><span class="expend"></span></div>  
+                </div>
+            </nav>
+            <div class="ph">
+                <img src="portfolio_image2.png" alt="">
+            </div>
+        </main>
+        <div class="about">
+            <h1>ABOUT ME</h1>
+            <div class="about-option">
+                <span class="splzt">Specialization</span>
+                <span class="abt">About</span>
+                <div class="tougle-line"></div>
+            </div>
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="aboutImage.png" alt="">
+                </div>
+                <div class="about-content">
+                    <div class="first-ab-contect">
+                        <div class="main">
+                            <div class="tooltips-contaimer mongoDB">
+                                <img src="/tooltip_img/mongoDB.svg" alt="mongoDB">
+                                <span class="notation">M</span>
+                                <span class="name1">mongoDB <div class="arrow1"></div></span>
+
+                            </div>
+                            <div class="tooltips-contaimer express">
+                                <img src="/tooltip_img/express JS.svg" alt="express">
+                                <span class="notation">E</span>
+                                <span class="name1">Express.JS <div class="arrow1"></div></span>
+                            </div>
+                            <div class="tooltips-contaimer react">
+                                <img src="/tooltip_img/react.js.svg" alt="reactJS">
+                                <span class="notation">R</span>
+                                <span class="name1">React.JS <div class="arrow1"></div></span>
+
+                            </div>
+                            <div class="tooltips-contaimer node">
+                                <img src="tooltip_img/node.js.svg" alt="node">
+                                <span class="notation">N</span>
+                                <span class="name1">Node.JS <div class="arrow1"></div></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-ab-contect">
+                        <p>I am a driven <b>Full Stack Developer</b> pursuing Computer Science Engineering at Arya
+                            College of
+                            Engineering and IT. Proficient in HTML5, CSS3, JavaScript, React, Node.js, Express.js, and
+                            MongoDB, I create dynamic, responsive web applications. Experienced with Bootstrap,
+                            TailwindCSS, GSAP, and Redux, and skilled in C, C++, and OOP concepts. </p>
+                        <br><br>
+                        <p>
+                            I have developed projects like an Online Cake Order System, Online Food Delivery,
+                            BookMyStay, a Chat Bot with API integration, and an E-commerce site, enhancing my technical
+                            skills and understanding of user-focused, scalable solutions.</p>
+                        <br><br>
+                        <p>
+                            Involved in hackathons and tech fests, I’ve sharpened my management skills and value clean
+                            code, teamwork, and staying updated with industry trends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h1 class="sk-head">SKILLS</h1>
+            <div class="skills">
+                <h2>USING NOW:</h2>
+                <div class="skills-icon">
+                    <div class="html ff">
+                        <img src="Group 12.svg" alt="HTML">
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="css ff">
+                        <img src="Group 13.svg" alt="CSS">
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="js ff">
+                        <img src="Group.svg" alt="JAVASCRIPT">
+                        <h3>JAVASCRIPT</h3>
+                    </div>
+                    <div class="react ff">
+                        <img src="Group 14.svg" alt="React">
+                        <h3>REACT</h3>
+                    </div>
+                    <div class="boot ff">
+                        <img src="bootstrap.svg" alt="bootstrap">
+                        <h3>BOOTSTRAP</h3>
+                    </div>
+                    <div class="git ff">
+                        <img src="git.svg" alt="git">
+                        <h3>GIT</h3>
+                    </div>
+                    <div class="figma ff">
+                        <img src="figma.svg" alt="figma">
+                        <h3>FIGMA</h3>
+                    </div>
+                    <div class="SQL ff">
+                        <img src="Vector.svg" alt="SQL">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="Tailwind ff">
+                        <img src="tailwind.svg" alt="Tailwind CSS">
+                        <h3>TAILWIND CSS</h3>
+                    </div>
+                    <div class="git ff">
+                        <img src="Group (1).svg" alt="nodeJS">
+                        <h3>NODEJS</h3>
+                    </div>
+                    <div class="GitHub ff">
+                        <img src="Octicons-mark-github.svg" alt="GitHub">
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class="GitHub ff">
+                        <img src="gsap-greensock.svg" alt="GSAP">
+                        <h3>GSAP</h3>
+                    </div>
+                    <div class="git ff">
+                        <img src="Vector (1).svg" alt="mongoDB">
+                        <h3>MONGODB</h3>
+                    </div>
+                    <div class="redux ff">
+                        <img src="redux.svg" alt="redux">
+                        <h3>REDUX</h3>
+                    </div>
+                    <div class="Express ff">
+                        <img src="images.png" alt="Express">
+                        <h3>Express JS</h3>
+                    </div>
+                </div>
+                <h2>LEARNING</h2>
+                <div class="skills-icon">
+                    <div class="git ff">
+                        <img src="Group (2).svg" alt="typescript">
+                        <h3>TYPESCRIPT</h3>
+                    </div>
+                </div>
+                <h2>OTHER SKILLS</h2>
+                <div class="skills-icon">
+                    <div class="git ff">
+                        <img src="image 20.svg" alt="C++">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="git ff">
+                        <img src="image 17.svg" alt="C">
+                        <h3>C</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+
+            <div class="pro-heading">
+                <h1>PROJECTS</h1>
+            </div>
+            <!-- Quiz app card  -->
+            <div class="pro1">
+                <div class="p1-img">
+                    <div class="fix">
+                        <a href="https://niteshzzzzz.github.io/Quiz-app/">
+                            <div class="img-comb">
+                                <img src="quizGame.png" alt="" class="laptop">
+                            </div>
+                        </a>
+                        <a href="https://niteshzzzzz.github.io/Quiz-app/"><span class="name">Quiz App <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <div class="arrow"></div>
+                            </span></a>
+
+                        <a href="https://niteshzzzzz.github.io/Quiz-app/"><span class="name2 cc1">Quiz App <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span></a>
+                    </div>
+                </div>
+                <div class="p1-content gg">
+                    <h2>QUIZ GAME</h2>
+                    <span>
+                        <h3>(game)</h3>
+                    </span>
+                    <P>
+                        Built a quiz website using html, css, javaScript, Bootstrap. User can play the quiz game by
+                        giving
+                        answers of some questions and see their scores. Every questions have four option and you have 30
+                        sec
+                        to give answer. When you give right answer then correct sign show otherwise cross sign will be
+                        show.
+                        In this game, you have background music controler to stop and play background music.
+                    </P>
+                    <div class="hash">
+                        <ul>
+                            <li>#HTML</li>
+                            <li>#CSS</li>
+                            <li>#JavaScript</li>
+                            <li>#Bootstrap</li>
+                            <li>#web Develpment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Countries APIs card -->
+            <div class="pro1">
+                <div class="p2-img p2-img-b">
+                    <div class="fix">
+                        <a href="https://glistening-duckanoo-76178d.netlify.app/">
+                            <div class="img-comb2">
+                                <img src="country.png" alt="" class="laptop">
+                            </div>
+                        </a>
+                        <a href="https://glistening-duckanoo-76178d.netlify.app/"><span class="name2 cc2">Countries APIs
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span></a>
+                    </div>
+                </div>
+                <div class="p2-content dd">
+                    <h2>Know About Country</h2>
+                    <span>
+                        <h3>(REST COUNTRIES APIs)</h3>
+                    </span>
+                    <P>
+                        Created a website that holds
+                        information about any country in the word like name, language,
+                        currency, region, flag, capital, population, area etc Developed this website using ReactJS, css,
+                        Bootstrap,
+                        JavaScript. In this I also use APIs that provide data of any country. I also created this
+                        website in
+                        React.
+                    </P>
+                    <div class="hash">
+                        <ul>
+                            <li>#React JS</li>
+                            <li>#HTML</li>
+                            <li>#CSS</li>
+                            <li>#JavaScript</li>
+                            <li>#Bootstrap</li>
+                            <li>#APIs</li>
+                            <li>#web Develpment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p2-img p2-img-a">
+                    <div class="fix">
+                        <a href="https://glistening-duckanoo-76178d.netlify.app/">
+                            <div class="img-comb2">
+                                <img src="country.png" alt="" class="laptop">
+                            </div>
+                        </a>
+                        <a href="https://glistening-duckanoo-76178d.netlify.app/"><span class="name">Countries APIs <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <div class="arrow"></div>
+                            </span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chatbot card  -->
+            <div class="pro1">
+                <div class="p1-img">
+                    <div class="fix">
+                        <a href="https://bucolic-tartufo-7d3fed.netlify.app/">
+                            <div class="img-comb">
+                                <img src="Chatbot.png" alt="" class="laptop">
+                            </div>
+                        </a>
+                        <a href="https://bucolic-tartufo-7d3fed.netlify.app/"><span class="name">ChatBot <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <div class="arrow"></div>
+                            </span></a>
+
+                        <a href="https://bucolic-tartufo-7d3fed.netlify.app/"><span class="name2 cc3"> ChatBot <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span></a>
+                    </div>
+                </div>
+                <div class="p1-content cc">
+                    <h2>Ask Anything...</h2>
+                    <span>
+                        <h3>(AI Chatbot)</h3>
+                    </span>
+                    <P>
+                        Created a chatbot using html, css, javaScript, GSAP and chatGPT API. In this chatbot, I provided
+                        login functionality, bright and dark mode, text copy functionality, about section, contact Us
+                        section and I will also add voice command functionality.
+                    </P>
+                    <div class="hash">
+                        <ul>
+                            <li>#Chatbot</li>
+                            <li>#HTML</li>
+                            <li>#CSS</li>
+                            <li>#JavaScript</li>
+                            <li>#Bootstrap</li>
+                            <li>#APIs</li>
+                            <li>#ChatGPT</li>
+                            <li>#Gemini</li>
+                            <li>#web Develpment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line">
+                <a href="https://niteshzzzzz.github.io/Quiz-app/" class="first-circle l1"></a>
+                <a href="https://glistening-duckanoo-76178d.netlify.app/" class="first-circle l2"></a>
+                <a href="https://bucolic-tartufo-7d3fed.netlify.app/" class="first-circle l3"></a>
+            </div>
+            <div class="horiz1"></div>
+            <div class="horiz2"></div>
+            <div class="horiz3"></div>
+        </div>
+
+        <!-- services section start -->
+        <section class="services" id="services">
+            <div class="max-width">
+                <h2 class="title">My services</h2>
+                <div class="serv-content">
+                </div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <span id="second"></span>
+                    <div class="content">
+                        <h2>Web Developer</h2>
+                        <p>As a MERN stack developer, I provide end-to-end solutions including frontend design, backend
+                            development, and full stack integrations. In this digital world, I help people in build
+                            there business and brand digitally.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <span id="first"> </span>
+                    <div class="content">
+                        <h2>Web Designer</h2>
+                        <p>I am a Fresher web designer. I have make different design with different ideas. I today's rat
+                            race new fresher have more mind blowing ideas with more expoloring ideas.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <span id="third"></span>
+                    <div class="content">
+                        <h2>SEO</h2>
+                        <p>I provide SEO in every business for getting there business in first ,which helps people to
+                            make stand there business in google search first.</p>
+                    </div>
+                </div>
+                <!-- <div class="box">
+                    <span id="fourth"></span>
+                    <div class="content">
+                        <h2>video Editing</h2>
+                        <p>In this competitive world video editing is necessary in any of the digital platform. Most of
+                            the eCommerce website needs video in there which make there customer attractive.</p>
+                    </div>
+                </div> -->
+                <!-- <div class="box">
+                    <span id="fifth"></span>
+                    <div class="content">
+                        <h2>Digital Marketing</h2>
+                        <p>Digital Marketing is the only tools which helps people to build advertised there business
+                            digitally which make people more attracted to there products and there business.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <span id="sixth"></span>
+                    <div class="content">
+                        <h2>App Development</h2>
+                        <p>Apps helps to those people who are not mostly friendly towards the website.Apps helps people
+                            in user interface which make them easier.</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Slider main container -->
+        <div class="certificate-section">
+            <div class="c-heading">
+                <h1>CERTIFICATION</h1>
+            </div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="projects_img/Hack2skill-Certificate.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/dbms.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/Learn&Build.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/hackerrank.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/programmingC.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/Learn&Build2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/soft_skills.png" alt=""></div>
+                    <div class="swiper-slide"><img src="projects_img/testC.png" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+
+        <!-- contect us page  -->
+        <div class="contact" id="contact">
+            <div class="c-heading">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="contect-section">
+                <div class="c-image"><img class="con1" src="fun-3d-cartoon-illustration-indian-businessman.png" alt="">
+                    <img class="con2" src="contact_images.png" alt="">
+                </div>
+                <div class="message">
+                    <div class="content">
+                        <h4>Have you alredy made up your mind? or do you still need to ask more questions?</h4>
+                        <h4>Don't hesitate to contact us!</h4>
+                    </div>
+                    <form id="contactForm" action="">
+                        <input type="text" placeholder="Your name" id="from_name" required>
+                        <input type="email" placeholder="E-mail address" id="email_id" required>
+                        <textarea placeholder="Tell us your message" id="message" required></textarea>
+                        <button type="submit" class="btn">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer section  -->
+        <footer>
+            <div class="f-cotainer">
+                <div class="back-to f-link"><i class="fa-solid fa-arrow-up-from-bracket"></i> Back to Top</div>
+                <div class="f-links">
+                    <div class="logo"><img src="output-onlinepngtools (1).png" alt=""></div>
+                </div>
+                <div class="c-name">Nitesh Kumar &copy; 2024</div>
+                <div class="f-icons">
+                    <a href="https://www.instagram.com/niteshkumarnkzzzzz/profilecard/?igsh=MWRzcDhzMnUzM3F5bQ== "><i class="fa-brands fa-square-instagram" id="in"></i></a>
+                    <a href="https://www.linkedin.com/in/nitesh-kumar-904393259/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=" https://x.com/NiteshK08772213?s=08"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/Niteshzzzzz"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=niteshkumarnkzzzzz@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
