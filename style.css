@@ -124,7 +124,7 @@ main {
     font-weight: bold;
     color: #6e6e6e;
     height: 24px;
-    
+
 }
 
 .p2 {
@@ -238,7 +238,7 @@ nav {
     margin-right: 20px;
 }
 
-.op-container{
+.op-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,6 +251,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
 }
+
 .expend {
     width: 0;
     background-color: transparent;
@@ -258,7 +259,8 @@ nav {
     height: 4px;
     border-radius: 2px;
 }
-.op-container:hover .expend{
+
+.op-container:hover .expend {
     background-color: green;
     width: 105%;
 }
@@ -394,7 +396,7 @@ nav {
 .projects {
     position: relative;
     border-bottom: 2px solid black;
-    max-height: 1272px;
+    max-height: 1555px;
 }
 
 .pro-heading {
@@ -597,6 +599,15 @@ nav {
     position: absolute;
     top: 1030px;
     left: 10%;
+    z-index: -1;
+}
+
+.horiz4 {
+    border: 1px solid rgb(56, 172, 157);
+    width: 40%;
+    position: absolute;
+    top: 1370px;
+    left: 50%;
     z-index: -1;
 }
 
@@ -1063,6 +1074,11 @@ img {
         left: 20%;
     }
 
+    .horiz4 {
+        width: 30%;
+        top: 1280px;
+    }
+
     .l1 {
         top: 217px;
     }
@@ -1101,6 +1117,14 @@ img {
     }
 }
 
+@media(max-width: 1045px) {
+    .horiz4 {
+        width: 30%;
+        top: 1300px;
+    }
+}
+
+
 @media(max-width: 1000px) {
     .horiz1 {
         width: 30%;
@@ -1120,6 +1144,11 @@ img {
         left: 20%;
     }
 
+    .horiz4 {
+        width: 30%;
+        top: 1340px;
+    }
+
     .l1 {
         top: 247px;
     }
@@ -1137,9 +1166,20 @@ img {
     }
 }
 
+@media(max-width: 926px) {
+    .horiz4 {
+        width: 30%;
+        top: 1390px !important;
+    }
+}
+
 @media(max-width: 890px) {
     .horiz3 {
         top: 1080px;
+    }
+
+    .horiz4 {
+        top: 1440px !important;
     }
 
     .vertical-line {
@@ -1158,6 +1198,10 @@ img {
 @media(max-width: 800px) {
     .horiz3 {
         top: 1120px;
+    }
+
+    .horiz4 {
+        top: 1460px !important;
     }
 
     .vertical-line {
@@ -1183,9 +1227,12 @@ img {
     }
 }
 
-@media(max-width: 745px) {
+@media(max-width: 749px) {
     .horiz3 {
         top: 1140px;
+    }
+    .horiz4 {
+        top: 1460px !important;
     }
 
     .vertical-line {
@@ -1220,9 +1267,18 @@ img {
     }
 }
 
+@media(max-width: 698px) {
+    .horiz4 {
+        top: 1530px !important;
+    }
+}
+
 @media(max-width: 687px) {
     .horiz3 {
         top: 1180px;
+    }
+    .horiz4 {
+        top: 1590px !important;
     }
 
     .vertical-line {
@@ -1240,6 +1296,7 @@ img {
     .horiz1,
     .horiz2,
     .horiz3,
+    .horiz4,
     .l1,
     .l2,
     .l3 {
@@ -1493,17 +1550,19 @@ img {
 }
 
 /* service section css  */
-.services .serv-content{
+.services .serv-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 .max-width {
     background-color: #fff;
     margin-top: 20px;
 }
-section .title{
+
+section .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -1514,7 +1573,8 @@ section .title{
     background: white;
     color: #000;
 }
-section .title::before{
+
+section .title::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -1524,7 +1584,8 @@ section .title::before{
     background: #111;
     transform: translateX(-50%);
 }
-section .title::after{
+
+section .title::after {
     position: absolute;
     bottom: -8px;
     left: 50%;
@@ -1535,23 +1596,25 @@ section .title::after{
     transform: translateX(-50%);
 }
 
-.services, .teams{
-    color:#fff;
+.services,
+.teams {
+    color: #fff;
     background: #111;
 }
+
 .services .title::before,
-.teams .title::before{
+.teams .title::before {
     background: #000;
 }
+
 .services .title::after,
-.teams .title::after{
+.teams .title::after {
     background: white;
     content: "what i provide";
     color: red;
 }
 
-.container
-{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1560,8 +1623,8 @@ section .title::after{
     background: white;
     cursor: pointer;
 }
-.container .box
-{
+
+.container .box {
     position: relative;
     width: 320px;
     height: 400px;
@@ -1571,8 +1634,8 @@ section .title::after{
     margin: 40px 30px;
     transition: 0.5s;
 }
-.container .box::before
-{
+
+.container .box::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1584,8 +1647,8 @@ section .title::after{
     transition: 0.5s;
     transform: skewX(15deg);
 }
-.container .box::after
-{
+
+.container .box::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1599,49 +1662,49 @@ section .title::after{
     filter: blur(30px);
     transition: 0.5s;
 }
+
 .container .box:hover:before,
-.container .box:hover:after
-{
+.container .box:hover:after {
     transform: skewX(0deg);
     left: 20px;
     width: calc(100% - 90px);
 }
+
 .container .box:nth-child(1):before,
-.container .box:nth-child(1):after
-{
-    background: linear-gradient(315deg,#ffbc00,#ff0058);
+.container .box:nth-child(1):after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
+
 .container .box:nth-child(2):before,
-.container .box:nth-child(2):after
-{
-    background: linear-gradient(315deg,#03a9f4,#ff0058);
+.container .box:nth-child(2):after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
 }
+
 .container .box:nth-child(3):before,
-.container .box:nth-child(3):after
-{
-    background: linear-gradient(315deg,#4dff03,#00d0ff);
+.container .box:nth-child(3):after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
 }
+
 .container .box:nth-child(4):before,
-.container .box:nth-child(4):after
-{
-    background: linear-gradient(315deg,#eecda3 , #ef629f);
+.container .box:nth-child(4):after {
+    background: linear-gradient(315deg, #eecda3, #ef629f);
 }
+
 .container .box:nth-child(5):before,
-.container .box:nth-child(5):after
-{
-    background: linear-gradient(-315deg,#c33764 ,#1d2671);
+.container .box:nth-child(5):after {
+    background: linear-gradient(-315deg, #c33764, #1d2671);
 }
+
 .container .box:nth-child(6):before,
-.container .box:nth-child(6):after
-{
-    background: linear-gradient(315deg,#36d1dc ,#5b86e5);
+.container .box:nth-child(6):after {
+    background: linear-gradient(315deg, #36d1dc, #5b86e5);
 }
-.container .box .content
-{
+
+.container .box .content {
     position: relative;
     left: 0;
     padding: 20px 40px;
-    background:rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     backdrop-filter: blur(10ox);
@@ -1650,26 +1713,26 @@ section .title::after{
     color: #000000;
 
 }
-.container .box:hover .content
-{
+
+.container .box:hover .content {
     left: -25px;
-    padding:60px 40px ;
+    padding: 60px 40px;
 }
-.container .box .content h2
-{
+
+.container .box .content h2 {
     font-size: 2em;
     color: black;
     margin-bottom: 10px;
 }
-.container .box .content p
-{
+
+.container .box .content p {
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 1.4em;
     padding: 12px;
 }
-.container .box .content a
-{
+
+.container .box .content a {
     display: inline-block;
     font-size: 1.1em;
     color: #111;
@@ -1680,8 +1743,8 @@ section .title::after{
     font-weight: 700;
     margin-top: 5px;
 }
-.container .box span
-{
+
+.container .box span {
     display: block;
     position: absolute;
     top: 0;
@@ -1690,17 +1753,17 @@ section .title::after{
     bottom: 0;
     z-index: 50;
     pointer-events: none;
-  
+
 }
-.container .box span::before
-{
+
+.container .box span::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px ;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     opacity: 0;
@@ -1708,87 +1771,87 @@ section .title::after{
     animation: animate 2s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 05);
 }
-.container .box:hover #first::before 
-{
+
+.container .box:hover #first::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2334/PNG/512/pen_tool_anchor_point_design_icon_142354.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box:hover #second::before 
-{
+
+.container .box:hover #second::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/1145/PNG/512/codeoutlinedprogrammingsigns_81143.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box:hover #third::before 
-{
+
+.container .box:hover #third::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2066/PNG/512/search_icon_125165.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box:hover #fourth::before 
-{
+
+.container .box:hover #fourth::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/935/PNG/512/video-camera-outline_icon-icons.com_73112.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box:hover #fifth::before 
-{
+
+.container .box:hover #fifth::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/620/PNG/512/bars-chart-ascending_icon-icons.com_56865.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box:hover #sixth::before 
-{
+
+.container .box:hover #sixth::before {
     top: -50px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/936/PNG/512/android-character-symbol_icon-icons.com_73684.png") no-repeat;
     background-size: 100px;
     background-position: center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
-.container .box span::after
-{
+
+.container .box span::after {
     content: '';
     position: absolute;
-    bottom:  0;
+    bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px ;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     opacity: 0;
@@ -1798,81 +1861,80 @@ section .title::after{
     animation-delay: -1s;
 }
 
-.container .box:hover #sixth::after
-{
+.container .box:hover #sixth::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/936/PNG/512/android-character-symbol_icon-icons.com_73684.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
-.container .box:hover #fifth::after
-{
+
+.container .box:hover #fifth::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/620/PNG/512/bars-chart-ascending_icon-icons.com_56865.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
 
-.container .box:hover #fourth::after
-{
+.container .box:hover #fourth::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/935/PNG/512/video-camera-outline_icon-icons.com_73112.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
-.container .box:hover #third::after
-{
+
+.container .box:hover #third::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2066/PNG/512/search_icon_125165.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
-.container .box:hover #second::after
-{
+
+.container .box:hover #second::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/1145/PNG/512/codeoutlinedprogrammingsigns_81143.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
-.container .box:hover #first::after
-{
+
+.container .box:hover #first::after {
     bottom: -50px;
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px;
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2334/PNG/512/pen_tool_anchor_point_design_icon_142354.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
-@keyframes animate
-{
-    0%,100%
-    {
+
+@keyframes animate {
+
+    0%,
+    100% {
         transform: translateY(10px);
     }
-    50%
-    {
+
+    50% {
         transform: translateY(-10px);
     }
 }
